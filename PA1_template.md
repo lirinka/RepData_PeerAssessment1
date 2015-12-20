@@ -69,6 +69,17 @@ stepsInterval$interval[which.max(stepsInterval$steps)]
 ## [1] 835
 ```
 
+It's the 835th interval, and the maximum number of steps it contains is
+
+```r
+stepsInterval$steps[which.max(stepsInterval$steps)]
+```
+
+```
+## [1] 206.1698
+```
+
+
 
 ## Imputing missing values
 
@@ -126,7 +137,7 @@ stepsDailyNew <- aggregate(steps ~ date, activityNew, sum)
 hist(stepsDailyNew$steps, main="Mean number of steps per day, NA filled", breaks=10)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-9-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
 
 ... and Calculate and report the mean and median total number of steps taken per day.
 
@@ -167,4 +178,4 @@ stepsIntervalNew <- aggregate(steps ~ interval + dayOfWeek, activityNew, mean)
 xyplot(steps ~ interval | dayOfWeek, type="l", data=stepsIntervalNew, layout=c(1,2))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-12-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-13-1.png) 

@@ -50,6 +50,12 @@ plot(stepsInterval, type="l")
 stepsInterval$interval[which.max(stepsInterval$steps)]
 ```
 
+It's the 835th interval, and the maximum number of steps it contains is
+```{r}
+stepsInterval$steps[which.max(stepsInterval$steps)]
+```
+
+
 
 ## Imputing missing values
 
